@@ -1,7 +1,6 @@
 import React from "react";
+import { Link } from "react-router";
 import styles from "./Product.module.css";
-
-/* This component is used to display a single product in the products view. */
 
 export default function Product({ id, imagePath, name, price }) {
   return (
@@ -10,8 +9,7 @@ export default function Product({ id, imagePath, name, price }) {
       <div>{name}</div>
       <div>${price}</div>
       <div>
-        {/* Replace anchor element with router Link */}
-        <a href="#">View Details</a>
+        <Link to={`/products/${id}`}>View Details</Link>
       </div>
     </div>
   );
